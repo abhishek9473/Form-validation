@@ -22,7 +22,7 @@ const schema = yup.object().shape({
   userconfirmpassword: yup.string().oneOf([yup.ref("userpassword"), null]),
 });
 
-export default function UserForm() {
+export default function basicForm() {
   const test = {
     username: "name1",
     contact: 12345,

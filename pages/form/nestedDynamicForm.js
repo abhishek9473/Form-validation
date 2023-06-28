@@ -3,7 +3,7 @@ import { useForm, useFieldArray } from "react-hook-form";
 import UserNumber from "../../components/form/UserNumber";
 import Navbar from "../../components/useState/Navbar";
 
-export default function dynamic2() {
+export default function nestedDynamicForm() {
   const {
     register,
     handleSubmit,

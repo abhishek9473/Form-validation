@@ -18,14 +18,11 @@ function Navbar(props) {
             </div>
             <div className="grow font-medium align-middle">
               <ul className="flex space-x-5 justify-end ">
-                <Link href={"/"}>
-                  <li className="hover:cursor-pointer">Home</li>
+                <Link href={"/form/basicForm"}>
+                  <li className="hover:cursor-pointer">Basic-Form</li>
                 </Link>
-                <Link href={"/form"}>
-                  <li className="hover:cursor-pointer">Form</li>
-                </Link>
-                <Link href={"/form/form2"}>
-                  <li className="hover:cursor-pointer">Form-2</li>
+                <Link href={"/form/simpleForm"}>
+                  <li className="hover:cursor-pointer">Simple-Form</li>
                 </Link>
                 <Link href={"/form/nestedForm"}>
                   <li className="hover:cursor-pointer">Nested-Form</li>
@@ -33,8 +30,8 @@ function Navbar(props) {
                 <Link href={"/form/dynamicForm"}>
                   <li className="hover:cursor-pointer">Dynamic-Form</li>
                 </Link>
-                <Link href={"/form/dynamic2"}>
-                  <li className="hover:cursor-pointer">DynamicForm-2</li>
+                <Link href={"/form/nestedDynamicForm"}>
+                  <li className="hover:cursor-pointer">Nested-Dynamic</li>
                 </Link>
                 <Link href={"/form/useformcontext"}>
                   <li className="hover:cursor-pointer">formcontext</li>
@@ -42,12 +39,17 @@ function Navbar(props) {
               </ul>
             </div>
 
-            <button
+            <div className="flex flex-col text-center bg-teal-600 font-medium text-white px-1">
+              <span>submit form</span>
+              <span>and see in console</span>
+            </div>
+
+            {/* <button
               onClick={modeFunction}
               className="text-white border rounded-md bg-fuchsia-800 border-black px-2"
             >
               MODE
-            </button>
+            </button> */}
           </div>
         </div>
         {/* navbar end here */}

@@ -18,7 +18,7 @@ const schema = yup.object().shape({
   language: yup.array().min(1, "select one"),
 });
 
-export default function form2() {
+export default function simpleForm() {
   const {
     register,
     handleSubmit,
