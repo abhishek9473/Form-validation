@@ -14,7 +14,7 @@ function Navbar(props) {
         >
           <div className="flex mx-10 space-x-10 py-2 align-middle">
             <div className="font-bold hover:cursor-pointer text-2xl">
-              <Link href={"/"}>LOGO</Link>
+              <Link href={"/"}>HOME</Link>
             </div>
             <div className="grow font-medium align-middle">
               <ul className="flex space-x-5 justify-end ">
@@ -43,13 +43,6 @@ function Navbar(props) {
               <span>submit form</span>
               <span>and see in console</span>
             </div>
-
-            {/* <button
-              onClick={modeFunction}
-              className="text-white border rounded-md bg-fuchsia-800 border-black px-2"
-            >
-              MODE
-            </button> */}
           </div>
         </div>
         {/* navbar end here */}
