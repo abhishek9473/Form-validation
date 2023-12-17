@@ -1,41 +1,44 @@
 import React from "react";
-import Link from "next/link";
+import { NavLink } from "react-router-dom";
 
-function Navbar(props) {
-  const { themeMode, modeFunction } = props; // themeMOde == light
+function Navbar() {
+    const navActiveLink = ({isActive}) => {
+        return {
+            fontWeight : isActive ? "bold" : "normal",
+            // textDecoration : isActive ? "underline" : "none"
+        }
+    }
   return (
     <>
       <div className="sticky top-0">
         {/* navbar start */}
-        <div
-          className={`space-y-2 ${
-            themeMode == "dark" ? "bg-[#120e4d]" : "bg-cyan-400"
-          }`}
-        >
+        <div className="space-y-2 bg-cyan-400">
           <div className="flex mx-10 space-x-10 py-2 align-middle">
             <div className="font-bold hover:cursor-pointer text-2xl">
-              <Link href={"/"}>HOME</Link>
+              <NavLink style={navActiveLink} to={"/"}>
+                HOME
+              </NavLink>
             </div>
             <div className="grow font-medium align-middle">
               <ul className="flex space-x-5 justify-end ">
-                <Link href={"/form/basicForm"}>
+                <NavLink style={navActiveLink} to={"/basicForm"}>
                   <li className="hover:cursor-pointer">Basic-Form</li>
-                </Link>
-                <Link href={"/form/simpleForm"}>
+                </NavLink>
+                <NavLink style={navActiveLink} to={"/simpleForm"}>
                   <li className="hover:cursor-pointer">Simple-Form</li>
-                </Link>
-                <Link href={"/form/nestedForm"}>
+                </NavLink>
+                <NavLink style={navActiveLink} to={"/nestedForm"}>
                   <li className="hover:cursor-pointer">Nested-Form</li>
-                </Link>
-                <Link href={"/form/dynamicForm"}>
+                </NavLink>
+                <NavLink style={navActiveLink} to={"/dynamicForm"}>
                   <li className="hover:cursor-pointer">Dynamic-Form</li>
-                </Link>
-                <Link href={"/form/nestedDynamicForm"}>
+                </NavLink>
+                <NavLink style={navActiveLink} to={"/nestedDynamicForm"}>
                   <li className="hover:cursor-pointer">Nested-Dynamic</li>
-                </Link>
-                <Link href={"/form/useformcontext"}>
+                </NavLink>
+                <NavLink style={navActiveLink} to={"/useformcontext"}>
                   <li className="hover:cursor-pointer">formcontext</li>
-                </Link>
+                </NavLink>
               </ul>
             </div>
 

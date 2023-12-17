@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormContext, useFieldArray } from "react-hook-form";
 
-export default function UserAddress() {
+function ContextAddress() {
   const {
     register,
     control,
@@ -92,3 +92,5 @@ export default function UserAddress() {
     </>
   );
 }
+
+export default ContextAddress;

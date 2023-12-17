@@ -1,20 +1,11 @@
+// eslint-disable-next-line react/display-name
 import React from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Navbar from "../../components/useState/Navbar";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
-
-  // language: yup.object().oneOf([true]),
-
-  // language: yup.object().shape({
-  //     hindi: yup.boolean(),
-  //     english: yup.boolean(),
-  //     bhojpuri: yup.boolean(),
-  // }).oneOf([true]),
-
   user: yup.object().shape({
     age: yup.string().required("*"),
     number: yup.string().required("*"),
@@ -22,7 +13,7 @@ const schema = yup.object().shape({
   }),
 });
 
-export default function form2() {
+export default function NestedForm() {
   const {
     register,
     handleSubmit,
@@ -37,7 +28,6 @@ export default function form2() {
 
   return (
     <>
-      <Navbar />
       <div className="bg-gray-400 h-screen pt-4">
         <form
           onSubmit={handleSubmit(userData)}

@@ -1,9 +1,8 @@
 import React from "react";
 import { useForm, useFieldArray } from "react-hook-form";
-import UserNumber from "../../components/form/UserNumber";
-import Navbar from "../../components/useState/Navbar";
+import UserNumber from "./formComponent/UserNumber";
 
-export default function nestedDynamicForm() {
+export default function NestedDynamicForm() {
   const {
     register,
     handleSubmit,
@@ -22,7 +21,6 @@ export default function nestedDynamicForm() {
 
   return (
     <>
-      <Navbar />
       <div className="pt-7 min-h-screen bg-gradient-to-tr from-teal-300 via-yellow-100 to-lime-300">
         <div className="bg-gray-300 w-3/5 mx-auto p-5">
           {/* form start */}

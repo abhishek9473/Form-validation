@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Navbar from "../../components/useState/Navbar";
 
 const schema = yup.object().shape({
   username: yup.string().required("Name is required"),
@@ -18,7 +17,7 @@ const schema = yup.object().shape({
   language: yup.array().min(1, "select one"),
 });
 
-export default function simpleForm() {
+export default function SimpleForm() {
   const {
     register,
     handleSubmit,
@@ -34,7 +33,6 @@ export default function simpleForm() {
 
   return (
     <>
-      <Navbar />
       <div className="bg-gray-400 h-screen pt-4">
         <form
           onSubmit={handleSubmit(userData)}

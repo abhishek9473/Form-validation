@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Navbar from "../../components/useState/Navbar";
 
 const schema = yup.object().shape({
   users: yup.array().of(
@@ -13,7 +12,7 @@ const schema = yup.object().shape({
   ),
 });
 
-export default function dynamicForm() {
+export default function DynamicForm() {
   const {
     register,
     handleSubmit,
@@ -43,7 +42,6 @@ export default function dynamicForm() {
 
   return (
     <>
-      <Navbar />
       <div className=" py-7">
         <div className="bg-gray-300 w-3/5 mx-auto py-1">
           {/* form start */}

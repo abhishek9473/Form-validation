@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Navbar from "../../components/useState/Navbar";
 
 const schema = yup.object().shape({
   username: yup.string().required("Name is required"),
@@ -22,15 +21,7 @@ const schema = yup.object().shape({
   userconfirmpassword: yup.string().oneOf([yup.ref("userpassword"), null]),
 });
 
-export default function basicForm() {
-  const test = {
-    username: "name1",
-    contact: 12345,
-    email: "test@mail.com",
-    userpassword: 1234,
-    userconfirmpassword: 1234,
-  };
-
+export default function BasicForm() {
   const {
     register,
     handleSubmit,
@@ -46,7 +37,6 @@ export default function basicForm() {
 
   return (
     <>
-      <Navbar />
       <div className="flex justify-center bg-teal-500 h-screen">
         <form
           onSubmit={handleSubmit(dataSubmit)}

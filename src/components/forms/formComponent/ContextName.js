@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 
-export default function UserName() {
+function ContextName() {
   const {
     register,
     formState: { errors },
@@ -58,3 +58,4 @@ export default function UserName() {
     </>
   );
 }
+export default ContextName;

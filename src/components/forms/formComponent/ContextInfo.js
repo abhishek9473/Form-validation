@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 
-export default function UserInfo() {
+function ContextInfo() {
   const {
     register,
     formState: { errors },
@@ -45,3 +45,5 @@ export default function UserInfo() {
     </>
   );
 }
+
+export default ContextInfo;
